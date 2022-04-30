@@ -2,7 +2,7 @@
   <div>
       <div class="title">热门推荐</div>
       <ul>
-          <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+          <li class="item border-bottom" v-for="item of list" :key="item.id">
               
                   <img class="item-img" :src="item.imgUrl" alt="">
              
@@ -19,26 +19,9 @@
 <script>
 export default {
     name: "HomeRecommend",
-    data () {
-      return {
-         recommendList: [{
-        id: '0001',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1907/4c/4cda385d920fb173a3.img.jpg_200x200_5baf0cc9.jpg',
-        title: '邯郸方特国色春秋',
-        desc: '浪漫邯郸，浪漫邯郸方特国色春秋'
-      },{
-        id: '0002',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1907/4c/4cda385d920fb173a3.img.jpg_200x200_5baf0cc9.jpg',
-        title: '邯郸方特国色春秋',
-        desc: '浪漫邯郸，浪漫邯郸方特国色春秋'
-      },{
-        id: '0003',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1907/4c/4cda385d920fb173a3.img.jpg_200x200_5baf0cc9.jpg',
-        title: '邯郸方特国色春秋',
-        desc: '浪漫邯郸，浪漫邯郸方特国色春秋'
-      }]
-      }
-    }
+   props:{
+     list : Array
+   }
 }
 </script>
 
