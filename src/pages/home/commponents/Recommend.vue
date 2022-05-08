@@ -1,6 +1,7 @@
 <template>
   <div>
       <div class="title">热门推荐</div>
+      <!-- <input type="button" value="点击获取" v-on:click="getxinwen()"> -->
       <ul>
           <li class="item border-bottom" v-for="item of list" :key="item.id">
               
@@ -12,16 +13,46 @@
                 <button class="item-button"> 查看详情</button>
               </div>
           </li>
+            <!-- <li class="item border-bottom" v-for="item of jokes" :key="item.id">
+              
+                  <img class="item-img" :src="item.picUrl" alt="">
+             
+              <div class="item-info">
+                <p class="item-title">{{item.title}}</p>
+                <p class="item-desc">{{item.source}}</p>
+                <button class="item-button"> 查看详情</button>
+              </div>
+          </li> -->
       </ul>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
     name: "HomeRecommend",
    props:{
      list : Array
-   }
+   },
+  // data(){
+  //   return {
+  //     jokes:[]
+  //   }
+  // },
+  //  methods:{
+  //   getxinwen(){
+  //   axios({
+	// 	url:'http://api.tianapi.com/topnews/index',
+	// 	method:'post',
+  //    params:{
+  //           key:'57468839d455f195e45a1b6aa2c931ff'
+  //       }
+	// }).then(res=>{
+  //       this.jokes=res.data.newslist
+  //       console.log(this.jokes);
+  //   })
+  // },
+  //  }
 }
 </script>
 
