@@ -13,14 +13,14 @@
                 <button class="item-button"> 查看详情</button>
               </div>
           </li>
-            <!-- <li class="item border-bottom" v-for="item of jokes" :key="item.id">
+            <!-- <li class="item border-bottom" v-for="item of list" :key="item.id">
               
                   <img class="item-img" :src="item.picUrl" alt="">
-             
+
               <div class="item-info">
                 <p class="item-title">{{item.title}}</p>
-                <p class="item-desc">{{item.source}}</p>
-                <button class="item-button"> 查看详情</button>
+                <p class="item-desc">{{item.ctime}}</p>
+                <a class="item-button" :href="item.url"> 查看详情</a>
               </div>
           </li> -->
       </ul>

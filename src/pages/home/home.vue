@@ -31,7 +31,8 @@ export default{
       swiperList: [],
       iconList: [],
       recommendList: [],
-      weekendList: []
+      weekendList: [],
+      
     }
   },
   methods: {
@@ -48,11 +49,43 @@ export default{
         this.recommendList = res.data.recommendList
         this.weekendList = res.data.weekendList
       }
-      console.log(res)
-    }
+    },
+
+   
+  //   //获取电竞和旅游
+  //   getgame(){
+  //      let newVar=axios.create({
+  //       baseURL:'http://api.tianapi.com/',
+  //       timeout:5000
+  //   });
+  //   //电竞
+  //   newVar({
+  //       url:'esports/index',
+  //       params:{
+  //           key: '57468839d455f195e45a1b6aa2c931ff',
+  //           num: 3
+  //       }
+  //   }).then(res=>{
+  //      this.recommendList = res.data.newslist
+  //   }),
+  //   //旅游
+  // newVar({
+  //       url:'travel/index',
+  //       params:{
+  //           key: '57468839d455f195e45a1b6aa2c931ff',
+  //           num: 5
+  //       }
+  //   }).then(res=>{
+  //       this.weekendList = res.data.newslist
+  //   })
+  
+  //   }
   },
   mounted () {
     this.getHomeInfo()
+    // ,
+    // this.getgame()
+
   }
 
 }

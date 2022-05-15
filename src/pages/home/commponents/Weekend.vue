@@ -12,6 +12,19 @@
               
               </div>
           </li>
+
+          <!-- <li class="item border-bottom" v-for="item of list" :key="item.id">
+                  <div class="item-img-warter">
+                      <a class="item-button" :href="item.url">
+                     <img class="item-img" :src="item.picUrl" alt="">
+                      </a>
+                 </div>
+              <div class="item-info">
+                <p class="item-title">{{item.title}}</p>
+                <p class="item-desc">{{item.ctime}}</p>
+              
+              </div>
+          </li> -->
       </ul>
   </div>
 </template>
