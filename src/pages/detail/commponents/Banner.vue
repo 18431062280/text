@@ -1,18 +1,19 @@
 <template>
   <div>
       <div class="banner" @click="handleBanner">
-      <img class="banner-img" src="http://img1.qunarzz.com/sight/p0/1805/78/789e31213399290fa3.water.jpg_600x330_a807626a.jpg">
+      <img class="banner-img" :src="bannerImg">
 
       <div class="banner-info"> 
           <div class="banner-tittle">
-            白石山世界地质公园(AAAAA景区)
+            {{this.sightName}}
             </div>
           <div class="banner-number">
-             <span class="iconfont banner-icon">&#xe8d3;</span>39
+             <span class="iconfont banner-icon">&#xe8d3;</span>
+             {{this.bannerImgs.length}}
           </div>
       </div>
     </div>
-  <common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
+  <common-gallary :imgs="bannerImgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
   </div>
 </template>
 
@@ -21,11 +22,16 @@ import CommonGallary from 'common/gallary/Gallary.vue'
 
 export default {
     name:'Detail',
+    props: {
+      sightName: String,
+      bannerImg:String,
+      bannerImgs:Array
+
+    },
     data () {
       return {
         showGallary: false,
-        imgs: ['http://img1.qunarzz.com/sight/p0/1805/78/789e31213399290fa3.water.jpg_r_800x800_c8320f98.jpg',
-            'http://img1.qunarzz.com/sight/p0/1805/1e/1ead31f6005d012a3.img.png_r_800x800_05202bdc.png']
+       
       }
     },
     methods:{ 
