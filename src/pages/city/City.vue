@@ -13,13 +13,15 @@ import CityHeader from './commponents/Header.vue'
 import CitySearch from './commponents/Search.vue'
 import CityList from './commponents/List.vue'
 import CityAlphabet from './commponents/Alphabet.vue'
+
 export default {
     name: 'City',
     components: {
         CityHeader,
         CitySearch,
         CityList,
-        CityAlphabet
+        CityAlphabet,
+      
     },
     data(){
         return{

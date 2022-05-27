@@ -3,16 +3,18 @@
       <div class="title">热门推荐</div>
       <!-- <input type="button" value="点击获取" v-on:click="getxinwen()"> -->
       <ul>
-          <li class="item border-bottom" v-for="item of list" :key="item.id">
+       
+          <router-link tag="li" class="item border-bottom" v-for="item of list" :key="item.id" :to="'/detail/'+item.id">
               
-                  <img class="item-img" :src="item.imgUrl" alt="">
+                  <img class="item-img" :src="item.imgUrl" alt="" >
              
               <div class="item-info">
                 <p class="item-title">{{item.title}}</p>
                 <p class="item-desc">{{item.desc}}</p>
                 <button class="item-button"> 查看详情</button>
               </div>
-          </li>
+          </router-link>
+       
             <!-- <li class="item border-bottom" v-for="item of list" :key="item.id">
               
                   <img class="item-img" :src="item.picUrl" alt="">
